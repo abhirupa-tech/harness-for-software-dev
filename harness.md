@@ -1,6 +1,3 @@
-harness.md
-
-A single-file agent harness for frontend work in an existing codebase.
 ## Setup
 
 Create .harness/ for working files and add it to .gitignore. Every agent communicates by writing files there. Nothing is passed agent to agent directly, because everything needs to be inspectable afterwards.
