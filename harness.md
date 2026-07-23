@@ -1,23 +1,7 @@
 harness.md
 
 A single-file agent harness for frontend work in an existing codebase.
-
-Drop this in your repo root. Reference it from CLAUDE.md with one line:
-
-Follow the harness in harness.md for any feature work. Do not skip Phase 1.
-
-Then start a feature with:
-
-Run the harness in harness.md for: <one to four sentence feature request>
-Why this exists
-
-Given a bare prompt, an agent will produce something that looks right and is quietly wrong in ways review does not catch. It will invent an interface that already exists, ignore the shared component every other screen uses, and pick a default that is technically reasonable and semantically false. An empty grade cell becomes 0 instead of "not entered", a teacher saves a half-finished sheet, and thirty report cards go home saying something untrue.
-
-You cannot prompt your way out of that. The fix is structural: split the work across agents that each do one thing, put a human at the point where a misunderstanding is still cheap, and separate the agent doing the work from the agent grading it.
-
-Adapted from Prithvi Rajasekaran's Harness design for long-running application development.
-
-Setup
+## Setup
 
 Create .harness/ for working files and add it to .gitignore. Every agent communicates by writing files there. Nothing is passed agent to agent directly, because everything needs to be inspectable afterwards.
 
